@@ -24,19 +24,19 @@ const ENTER = 13;
 const KEY_P = 80;
 
 const INTRO_DIALOGUE = [
-  "Norman wasn't a particularly popular necromancer...",
-  "         The other villagers hunted him.",
-  "     Sometimes they even finished the job (@)",
-  "  But like any self-respecting necromancer...",
-  "        Norman just brought himself back.",
+  "A village for the Little Lich to feast upon.",
+  " It would suck up the essence of the souls here",
+  "     And Rise in power - to raise the @ dead @ !",
+  "  As long as it didn't let the villagers get too close..",
 ];
 
 const OUTRO_DIALOGUE = [
-  "",
+
   "It was over.",
-  "Norman was able to study peacefully.",
-  "But he knew that eventually, they'd be back.",
-  "THE END",
+  "The Little Lich had plucked countless souls from their bodies .",
+  "Now onwards for greater power and infamy!",
+  "Town Unlocked",
+  "Nasty Necromancer Unlocked",
 ];
 
 onpointerup = () => {
