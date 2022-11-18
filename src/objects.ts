@@ -22,7 +22,7 @@ export function Player() {
   player.sprite = sprites.norman_arms_down;
   player.collisionMask = LIVING;
   player.updateSpeed = 1000;
-  player.hp = player.maxHp = 5;
+  player.hp = player.maxHp = 1;
   player.emitter = fx.resurrect(player);
   player.onCollision = unit => {
     Damage(player, unit.hp);

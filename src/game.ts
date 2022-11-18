@@ -262,8 +262,8 @@ export class Game {
     basePower: 180,
     shotsPerRound: 1,
     shotOffsetAngle: 0.1,
-    maxCasts: 3,
-    casts: 3,
+    maxCasts: 1,
+    casts: 1,
     castRechargeRate: 1000,
     castRechargeTimer: 0,
   };
