@@ -45,16 +45,18 @@ export function exitShop() {
 
 export function restockShop() {
   let exp = Math.pow(game.level + 1, 2);
+		// need to get this to the actual "experience" level... (ie sum of maxHp + maxCasts - 2)
   let items: (ShopItem | false)[] = [
     game.player.hp < game.player.maxHp &&
       ShopItem(10 * game.level, "Heal", `Heal 1*`, () => Damage(game.player, -1)),
 
-    ShopItem(10 * exp, "Renew", `+1* max hp`, () => {
+    ShopItem(33, "Renew", `+1* max hp`, () => {
       game.player.maxHp++;
       game.player.hp++;
     }),
 
-    ShopItem(10 * exp, "Recharge", "+1\x7F max casts", () => game.spell.maxCasts++),
+ //   ShopItem(80 * exp, "Recharge", "+1\x7F max casts", () => game.spell.maxCasts++),
+    ShopItem(33, "Recharge", "+1\x7F max casts", () => game.spell.maxCasts++),
 
     ...createRitualItems(),
     ShopItem(0, "Continue", "Begin the next level", () => exitShop()),
