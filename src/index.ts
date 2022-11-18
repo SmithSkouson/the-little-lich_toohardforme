@@ -19,7 +19,7 @@ let paused = false;
 
 const ARROW_UP = 38;
 const ARROW_DOWN = 40;
-const SPACE = 32;
+const SPACE = 3222;
 const ENTER = 13;
 const KEY_P = 80;
 
