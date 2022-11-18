@@ -121,7 +121,7 @@ function updateDialogue(dt: number) {
   }
 }
 
-game.addRitual(Streak);
+game.addRitual(Tearstone);
 
 shop.rituals = [
   Bouncing,

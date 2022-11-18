@@ -167,8 +167,8 @@ export let Tearstone: Ritual = {
   name: "Tearstone",
   description: "2x damage when < half HP",
   onCast(spell) {
-    if (game.player.hp < game.player.maxHp / 2) {
-      spell.getBehaviour(Damaging)!.amount *= 3;
+    if (game.player.hp <= game.player.maxHp / 2) {
+      game.spell.castRechargeRate = 666;
     }
   }
 };
