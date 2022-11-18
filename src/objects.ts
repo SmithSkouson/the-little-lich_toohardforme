@@ -114,7 +114,7 @@ export function Villager() {
   unit.updateSpeed = 600;
   unit.addBehaviour(new March(unit, -16));
   unit.corpseChance = 0.75;
-  unit.souls = 5;
+  unit.souls = 1;
   return unit;
 }
 
@@ -192,7 +192,7 @@ export function Champion() {
   unit.sprite = sprites.champion;
   unit.updateSpeed = 1000;
   unit.hp = unit.maxHp = 10;
-  unit.souls = 25;
+  unit.souls = 1;
   return unit;
 }
 
@@ -201,7 +201,7 @@ export function ShellKnight() {
   unit.sprite = sprites.shell_knight_up;
   unit.updateSpeed = 1000;
   unit.hp = unit.maxHp = 5;
-  unit.souls = 15;
+  unit.souls = 1;
 
   let shell = unit.addBehaviour();
   let shelled = false;
@@ -227,7 +227,7 @@ export function Monk() {
   unit.sprite = sprites.monk;
   unit.updateSpeed = 600;
   unit.hp = unit.maxHp = 3;
-  unit.souls = 10;
+  unit.souls = 1;
 
   let heal = new Behaviour(unit);
   heal.turns = 5;
@@ -263,7 +263,7 @@ export function Piper() {
   unit.updateSpeed = 500;
   unit.hp = unit.maxHp = 15;
   unit.addBehaviour(new Summon(unit, Rat, 2000));
-  unit.souls = 100;
+  unit.souls = 1;
   return unit;
 }
 
@@ -271,7 +271,7 @@ export function Rat() {
   let unit = Villager();
   unit.sprite = sprites.rat;
   unit.updateSpeed = 200;
-  unit.souls = 5;
+  unit.souls = 1;
   unit.corpseChance = 0;
   return unit;
 }
@@ -299,7 +299,7 @@ export function RageKnight() {
     unit.sprite = angry ? sprites.rage_knight_enraged : sprites.rage_knight;
     march.step = angry ? 0 : step;
   };
-  unit.souls = 20;
+  unit.souls = 1;
   return unit;
 }
 
@@ -307,7 +307,7 @@ export function RoyalGuard() {
   let unit = Villager();
   unit.sprite = sprites.royal_guard;
   unit.hp = unit.maxHp = 4;
-  unit.souls = 10;
+  unit.souls = 1;
   let march = unit.getBehaviour(March)!;
 
   let shielded = false;
@@ -358,7 +358,7 @@ export function Wizard() {
   let unit = Villager();
   unit.sprite = sprites.wizard;
   unit.hp = unit.maxHp = 15;
-  unit.souls = 10;
+  unit.souls = 2;
   unit.addBehaviour(new Summon(unit, Portal, 3000));
   return unit;
 }
@@ -368,7 +368,7 @@ export function Portal() {
   unit.sprite = sprites.portal;
   unit.tags = LIVING;
   unit.hp = unit.maxHp = 3;
-  unit.souls = 10;
+  unit.souls = 0;
   // Prevent the player from farming portals for souls
   unit.addBehaviour(new DespawnTimer(unit, 3000 * 10));
   unit.addBehaviour(
