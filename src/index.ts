@@ -32,11 +32,22 @@ const INTRO_DIALOGUE = [
 
 const OUTRO_DIALOGUE = [
 
-  "It was over.",
-  "The Little Lich had plucked countless souls from their bodies .",
-  "Now onwards for greater power and infamy!",
-  "Town Unlocked",
-  "Nasty Necromancer Unlocked",
+// Stage end:
+  "",
+  " The village had been decimated. ",
+  " The villagers souls absorbed one by one by the Little Lich.",
+  " Now onwards for greater power and infamy!",
+  " - Town Unlocked - ",
+  " - Nasty Necromancer Unlocked - ",
+  "",
+  " 'To be continued ...' ",
+  " *Thats all for now* ",
+  " *Thanks for testing, ..  !*",
+  " *.. hope you had fun getting this far :).* ",
+// End end:
+//  "It was over.",
+//  "The Little Lich had plucked countless souls from their bodies .",
+//  "Now onwards for greater power and infamy!",
 ];
 
 onpointerup = () => {
