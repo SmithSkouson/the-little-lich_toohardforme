@@ -37,7 +37,7 @@ export function Spell() {
   object.sprite = sprites.p_green_skull;
   object.tags = SPELL;
   object.collisionMask = MOBILE | LIVING;
-  object.mass = 100;
+  object.mass = 150;   // originally 100. 200 is a little harsh. 180 works also, but I wanted a little extra range compared to that.
   object.emitter = fx.trail();
   object.friction = 0.1;
   object.despawnOnCollision = true;
