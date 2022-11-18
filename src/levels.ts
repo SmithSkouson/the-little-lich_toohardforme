@@ -61,17 +61,26 @@ const DELAYS: Record<string | number, () => number> = {
 };
 
 const LEVELS = [
+  // Difficulty level is - Challenging :) !!
+
+  // Tested with both the +1 Hp (ie making use of the "Pain Focus" trait) and +1 Mana path till level 3 (inclusive) :P.  (can't test raise dead path till its setup)
   // Level 1
-  4, VILLAGER, END_OF_WAVE,
+  2, VILLAGER, END_OF_WAVE,
   4, VILLAGER, END_OF_WAVE,
   2, VILLAGER, 1, ARCHER, END_OF_WAVE,
   2, VILLAGER, 1, ARCHER, 4, VILLAGER, END_OF_LEVEL,
+
+  // Level 1.5
+  3, VILLAGER, END_OF_WAVE,
+  4, VILLAGER, 1, ARCHER, END_OF_WAVE,
+  2, VILLAGER, 2, ARCHER, END_OF_WAVE,
+  6, VILLAGER, 1, ARCHER, END_OF_LEVEL,
 
   // Level 2
   2, ARCHER, 4, VILLAGER, END_OF_WAVE,
   3, ARCHER, 4, VILLAGER, END_OF_WAVE,
   8, VILLAGER, 2, ARCHER, END_OF_WAVE,
-  1, CHAMPION, END_OF_LEVEL,
+  3, VILLAGER, 1, CHAMPION, 1, VILLAGER, END_OF_LEVEL, // added a small "retinue" to make the champion a little less easy, and a bit more interesting.
 
   // Level 3
   1, MONK, END_OF_WAVE,
@@ -81,17 +90,18 @@ const LEVELS = [
   4, VILLAGER, 2, BANDIT, 2, ARCHER, 1, MONK, END_OF_LEVEL,
 
   // Level 4
-  1, SHELL_KNIGHT, END_OF_WAVE,
-  4, VILLAGER, 3, BANDIT, END_OF_WAVE,
-  1, SHELL_KNIGHT, 1, MONK, 1, END_OF_WAVE,
-  2, ARCHER, 1, MONK, 1, SHELL_KNIGHT, END_OF_WAVE,
-  8, VILLAGER, END_OF_WAVE,
-  1, SHELL_KNIGHT, 1, CHAMPION, 1, SHELL_KNIGHT, END_OF_LEVEL,
+//  1, SHELL_KNIGHT, END_OF_WAVE,
+//  4, VILLAGER, 3, BANDIT, END_OF_WAVE,
+//  1, SHELL_KNIGHT, 1, MONK, 1, END_OF_WAVE,
+//  2, ARCHER, 1, MONK, 1, SHELL_KNIGHT, END_OF_WAVE,
+//  8, VILLAGER, END_OF_WAVE,
+//  1, SHELL_KNIGHT, 1, CHAMPION, 1, SHELL_KNIGHT, END_OF_LEVEL,
 
+/* 
   // Level 5 - Pied Piper (Miniboss)
   1, RAT, END_OF_WAVE,
   3, RAT, END_OF_WAVE,
-  7, RAT, 1, PIPER, END_OF_LEVEL,
+  3, RAT, 1, PIPER, END_OF_LEVEL,
 
   // Level 6
   4, BANDIT, END_OF_WAVE,
@@ -123,6 +133,7 @@ const LEVELS = [
 
   // Level 10 - The King (Boss Fight)
   1, THE_KING, END_OF_LEVEL,
+*/
 ];
 
 let timer = 0;
