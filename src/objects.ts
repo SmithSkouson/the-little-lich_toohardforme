@@ -191,7 +191,7 @@ export function Champion() {
   let unit = Villager();
   unit.sprite = sprites.champion;
   unit.updateSpeed = 1000;
-  unit.hp = unit.maxHp = 10;
+  unit.hp = unit.maxHp = 12;
   unit.souls = 1;
   return unit;
 }
