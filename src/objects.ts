@@ -114,7 +114,7 @@ export function Villager() {
   unit.updateSpeed = 600;
   unit.addBehaviour(new March(unit, -16));
   unit.corpseChance = 0.75;
-  unit.souls = 1;
+  unit.souls = 2;
   return unit;
 }
 
@@ -358,7 +358,7 @@ export function Wizard() {
   let unit = Villager();
   unit.sprite = sprites.wizard;
   unit.hp = unit.maxHp = 15;
-  unit.souls = 2;
+  unit.souls = 10;
   unit.addBehaviour(new Summon(unit, Portal, 3000));
   return unit;
 }
