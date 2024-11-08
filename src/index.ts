@@ -6,8 +6,7 @@ import { Cast, Resurrect } from "./actions";
 import { angleBetweenPoints } from "./helpers";
 import { Player } from "./objects";
 import { isComplete, isLevelFinished, updateLevel } from "./levels";
-import { Avarice, Bleed, Electrodynamics, Giants, Hardened, Hunter, Impatience, Rain, Salvage, Seer, Streak, Tearstone } from "./rituals";
-import { buy, enterShop, selectShopIndex, shop } from "./shop";
+import { Studious, Bleed, Bouncing, Ceiling, Drunkard, Salvage, Chilly, Hunter, Knockback, Rain, Seer, Doubleshot, Streak, Weightless, Electrodynamics, Impatience, Giants, Avarice, Hardened, Allegiance } from "./rituals";import { buy, enterShop, selectShopIndex, shop } from "./shop";
 import { dust } from "./fx";
 import { BPM, play } from "./sounds";
 import { March } from "./behaviours";
@@ -135,19 +134,28 @@ function updateDialogue(dt: number) {
 game.addRitual(Tearstone);
 
 shop.rituals = [
-  Rain,
-  Hunter,
-  Seer,
-  Impatience,
-  Bleed,
-  Salvage,
-  Electrodynamics,
-  Giants,
-  Avarice,
+    Bouncing,
+  Ceiling,
+Rain,
+  Doubleshot,
+Hunter,
+  Weightless,
+  Knockback,
+  Drunkard,
+Seer,
+Impatience,
+Bleed,
+Salvage,
+  Studious,
+Electrodynamics,
+  Chilly,
+Giants,
+Avarice,
+  Hardened,
+  Allegiance,
   Streak,
   Hardened
 ];
-
 game.dialogue = INTRO_DIALOGUE;
 
 init(game.stage.width, game.stage.height, update);
