@@ -6,7 +6,7 @@ import { Cast, Resurrect } from "./actions";
 import { angleBetweenPoints } from "./helpers";
 import { Player } from "./objects";
 import { isComplete, isLevelFinished, updateLevel } from "./levels";
-import { Studious, Bleed, Bouncing, Ceiling, Drunkard, Salvage, Chilly, Hunter, Knockback, Rain, Seer, Doubleshot, Streak, Weightless, Electrodynamics, Impatience, Giants, Avarice, Hardened, Allegiance } from "./rituals";import { buy, enterShop, selectShopIndex, shop } from "./shop";
+import { Studious, tearstone, Bleed, Bouncing, Ceiling, Drunkard, Salvage, Chilly, Hunter, Knockback, Rain, Seer, Doubleshot, Streak, Weightless, Electrodynamics, Impatience, Giants, Avarice, Hardened, Allegiance } from "./rituals";import { buy, enterShop, selectShopIndex, shop } from "./shop";
 import { dust } from "./fx";
 import { BPM, play } from "./sounds";
 import { March } from "./behaviours";
