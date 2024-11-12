@@ -83,6 +83,7 @@ export function Skeleton() {
   unit.sprite = sprites.skeleton;
   unit.tags = UNDEAD | MOBILE;
   unit.collisionMask = LIVING;
+  unit.corpseChance = 0.25
   unit.hp = unit.maxHp = 1;
   unit.updateSpeed = 1000;
   unit.behaviours.push(new March(unit, 16));
@@ -192,7 +193,7 @@ export function Champion() {
   unit.sprite = sprites.champion;
   unit.updateSpeed = 1000;
   unit.hp = unit.maxHp = 12;
-  unit.souls = 1;
+  unit.souls = unit.maxHp;
   return unit;
 }
 
@@ -201,7 +202,7 @@ export function ShellKnight() {
   unit.sprite = sprites.shell_knight_up;
   unit.updateSpeed = 1000;
   unit.hp = unit.maxHp = 5;
-  unit.souls = 1;
+  unit.souls = unit.maxHp;
 
   let shell = unit.addBehaviour();
   let shelled = false;
@@ -227,7 +228,7 @@ export function Monk() {
   unit.sprite = sprites.monk;
   unit.updateSpeed = 600;
   unit.hp = unit.maxHp = 3;
-  unit.souls = 1;
+  unit.souls = unit.maxHp;
 
   let heal = new Behaviour(unit);
   heal.turns = 5;
@@ -263,7 +264,7 @@ export function Piper() {
   unit.updateSpeed = 500;
   unit.hp = unit.maxHp = 15;
   unit.addBehaviour(new Summon(unit, Rat, 2000));
-  unit.souls = 1;
+  unit.souls = unit.maxHp;
   return unit;
 }
 
@@ -299,7 +300,7 @@ export function RageKnight() {
     unit.sprite = angry ? sprites.rage_knight_enraged : sprites.rage_knight;
     march.step = angry ? 0 : step;
   };
-  unit.souls = 1;
+  unit.souls = unit.maxHp;
   return unit;
 }
 
@@ -307,7 +308,7 @@ export function RoyalGuard() {
   let unit = Villager();
   unit.sprite = sprites.royal_guard;
   unit.hp = unit.maxHp = 4;
-  unit.souls = 1;
+  unit.souls = unit.maxHp;
   let march = unit.getBehaviour(March)!;
 
   let shielded = false;
@@ -358,7 +359,7 @@ export function Wizard() {
   let unit = Villager();
   unit.sprite = sprites.wizard;
   unit.hp = unit.maxHp = 15;
-  unit.souls = 10;
+  unit.souls = unit.maxHp;
   unit.addBehaviour(new Summon(unit, Portal, 3000));
   return unit;
 }
