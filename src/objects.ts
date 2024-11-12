@@ -114,7 +114,7 @@ export function Villager() {
   unit.updateSpeed = 600;
   unit.addBehaviour(new March(unit, -16));
   unit.corpseChance = 0.95;
-  unit.souls = 3;
+  unit.souls = unit.maxHp;
   return unit;
 }
 
