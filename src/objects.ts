@@ -93,7 +93,7 @@ export function Skeleton() {
 export function SkeletonLord() {
   let unit = Skeleton();
   unit.sprite = sprites.big_skeleton;
-  unit.hp = unit.maxHp = 3;
+  unit.hp = unit.maxHp = 5;
   unit.updateSpeed = 1500;
   return unit;
 }
@@ -113,8 +113,8 @@ export function Villager() {
   unit.hp = unit.maxHp = 1;
   unit.updateSpeed = 600;
   unit.addBehaviour(new March(unit, -16));
-  unit.corpseChance = 0.75;
-  unit.souls = 2;
+  unit.corpseChance = 0.95;
+  unit.souls = 3;
   return unit;
 }
 
