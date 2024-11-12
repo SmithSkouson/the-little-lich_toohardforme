@@ -96,6 +96,7 @@ export function SkeletonLord() {
   unit.sprite = sprites.big_skeleton;
   unit.hp = unit.maxHp = 5;
   unit.updateSpeed = 1500;
+  unit.corpseChance = 0.35
   return unit;
 }
 
@@ -122,6 +123,7 @@ export function Villager() {
 export function Bandit() {
   let unit = Villager();
   unit.hp = unit.maxHp = 2;
+  unit.souls = unit.maxHp;
   return unit;
 }
 
@@ -255,6 +257,7 @@ export function Archer() {
   unit.sprite = sprites.archer;
   unit.updateSpeed = 300;
   unit.hp = unit.maxHp = 2;
+  unit.souls = unit.maxHp;
   return unit;
 }
 
