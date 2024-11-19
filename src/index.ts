@@ -73,6 +73,7 @@ onkeydown = ({ which: key }) => {
     if (key === ARROW_UP) selectShopIndex(-1);
     if (key === ARROW_DOWN) selectShopIndex(+1);
     if (key === ENTER) buy();
+    if (key === KEY_L) addSouls(3:10);
   }
 }
 
